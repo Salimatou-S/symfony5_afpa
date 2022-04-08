@@ -17,8 +17,8 @@ class TestController extends AbstractController
     }
 /**    @Route("/test/{id}", name="test_id", methods={"GET"}, requirements={"id"="\d+"})
  */ 
-/*     #[Route('/test/{id}', name:'test_id', methods: [GET], requirements:"id"=>\d+]
- */    public function test_id($id): Response
+   #[Route('/test/{id}', name:'test_id', methods: "GET", requirements: ['id' => '\d+'])]
+     public function test_id($id): Response
     {
         return $this->render('test/test.html.twig', [
             'controller_name' => 'mon TestController avec id',
