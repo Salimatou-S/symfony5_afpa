@@ -12,6 +12,8 @@
         {% endblock %}
     </head>
     <body>
+        <a href="{{ path('app_test') }}">Lien vers test</a>
+        <a href="{{ path('test_id', {id:13}) }}">Lien vers test_id</a>
         {% block body %}{% endblock %}
     </body>
 </html>

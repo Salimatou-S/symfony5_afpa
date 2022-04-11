@@ -14,15 +14,18 @@ class TestController extends AbstractController
         return $this->render('test/index.html.twig', [
             'controller_name' => 'TestController',
         ]);
+        /* return $this->json (['username'=>'jane doe']); */
     }
 /**    @Route("/test/{id}", name="test_id", methods={"GET"}, requirements={"id"="\d+"})
  */ 
    #[Route('/test/{id}', name:'test_id', methods: "GET", requirements: ['id' => '\d+'])]
      public function test_id($id): Response
     {
+        /* dd($id); */
         return $this->render('test/test.html.twig', [
-            'controller_name' => 'mon TestController avec id',
+            'controller_name' => 'Mon TestController avec id', 'id'=>$id,
         ]);
     }
 
 }
+/** */ /*est un commentaire qui est lu par php, voir ci-dessus route*/
